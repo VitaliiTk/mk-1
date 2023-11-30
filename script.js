@@ -314,9 +314,21 @@ let charBtn = document.querySelectorAll('.character-item');
 
 const closeMoveModalBtn = document.querySelector('.close');
 closeMoveModalBtn.addEventListener('click', () => {
-    card.classList.add('display-none')
+    card.classList.add('transform-anim')
 })
 
+
+
+// Start Btn Logic
+const startBtn = document.querySelector('.btn-start');
+const characterList = document.querySelector('.character-list');
+const body = document.querySelector('body');
+
+startBtn.addEventListener('click', () => {
+    characterList.classList.remove('start-anim-gap');
+    startBtn.classList.add('display-none');
+    body.classList.add('change-bg')
+})
 
 
 // FETCH JSON =======================
@@ -324,7 +336,7 @@ closeMoveModalBtn.addEventListener('click', () => {
 
 function replaceContentIn(event, chooseCharacter) {
 
-    card.classList.remove('display-none');
+    card.classList.remove('transform-anim');
     charBtn.forEach((item) => {
         item.classList.remove('item-selected');
     })

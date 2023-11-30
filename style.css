@@ -47,7 +47,7 @@ body.change-bg {
     background: rgba(232, 232, 232, 1);
     backdrop-filter: blur(10px);
     margin: 0 auto;
-    position: fixed;
+    position: absolute;
     left: 0;
     right: 0;
     top: 10px;

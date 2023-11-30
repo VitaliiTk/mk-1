@@ -1,0 +1,202 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    box-sizing: border-box;
+    background: #041721;
+    padding: 20px 0;
+    font-family: sans-serif;
+    background-image: url('https://hillswestroundup.com/wp-content/uploads/2023/10/mortal-kombat-1.jpg');
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+body::after {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: -1;
+}
+
+::-webkit-scrollbar {
+    width: 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.card {
+    max-width: 1200px;
+    padding: 15px;
+    border-radius: 10px;
+    background: rgba(232, 232, 232, 0.8);
+    backdrop-filter: blur(10px);
+    margin: 0 auto;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 10px;
+    transform: translateY(0);
+    transition: all 0.5s;
+}
+
+.close {
+    height: 70px;
+    width: 70px;
+    border: none;
+    outline: none;
+    position: absolute;
+    right: 15px;
+    cursor: pointer;
+}
+
+.card .card_title {
+    text-align: left;
+    font-weight: 900;
+    letter-spacing: 3px;
+    color: #5885CF;
+    margin: 0;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+}
+
+.category-title,
+.category-subtitle {
+    color: #AE2A1D;
+    margin: 0;
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.category-subtitle {
+    font-size: 14px;
+    color: #5885CF;
+}
+
+.trick_list {
+    color: #fff;
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+    position: relative;
+}
+
+.trick_item {
+    box-sizing: border-box;
+    /* min-height: 38px; */
+    padding: 5px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+    background: #2382D3;
+    user-select: none;
+}
+
+.trick_item:hover {
+    background: #1A4C67;
+}
+
+.trick_item .trick_info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* background-color: #ff0147; */
+    border-radius: 3px;
+}
+
+.trick_name {
+    font-size: 14px;
+    margin-right: 10px;
+    user-select: none;
+}
+
+.trick_execution {
+    color: #fff;
+    text-align: right;
+    display: flex;
+    align-items: center;
+}
+
+.trick_execution span {
+    font-weight: 700;
+    margin: 0 5px;
+}
+
+.move-btn {
+    font-size: 14px;
+}
+
+.wrapper {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.trick_list_wrapper {
+    flex: 1 0 auto;
+
+}
+
+
+/* character list */
+.character-list {
+    list-style: none;
+    display: flex;
+    gap: 10px;
+    padding: 0;
+    flex-wrap: wrap;
+    justify-content: center;
+    user-select: none;
+    display: none;
+}
+
+.character-item {
+    text-transform: uppercase;
+    font-weight: 700;
+    background: rgba(232, 232, 232, 0.7);
+    backdrop-filter: blur(10px);
+    padding: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    flex-basis: 120px;
+}
+
+.character-item:hover {
+    background: rgba(255, 255, 255, 1);
+    backdrop-filter: blur(10px);
+}
+
+.character-item:hover.item-selected {
+    background-color: #AE2A1D;
+
+}
+
+.character-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.character-item .character-name {
+    text-align: center;
+    font-size: 12px;
+}
+
+.display-none {
+    /* display: none; */
+    transform: translateY(-3000px);
+}
+
+.item-selected {
+    background-color: #AE2A1D;
+    color: #fff;
+}

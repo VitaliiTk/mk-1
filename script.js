@@ -314,7 +314,10 @@ let charBtn = document.querySelectorAll('.character-item');
 
 const closeMoveModalBtn = document.querySelector('.close');
 closeMoveModalBtn.addEventListener('click', () => {
-    card.classList.add('transform-anim')
+    card.classList.add('transform-anim');
+    charBtn.forEach((item) => {
+        item.classList.remove('item-selected');
+    })
 })
 
 

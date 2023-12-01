@@ -43,16 +43,16 @@ body.change-bg {
 
 .card {
     max-width: 1200px;
-    height: 97vh;
+    height: 90vh;
     padding: 15px;
     border-radius: 10px;
     /* background: rgba(232, 232, 232, 1); */
     backdrop-filter: blur(300px);
     margin: 0 auto;
     position: fixed;
-    left: 0;
-    right: 0;
-    top: 10px;
+    left: 10px;
+    right: 10px;
+    top: 50%;
     transform: translateY(-3000px);
     transition: all 0.5s;
     box-shadow: 0px 0px 5px 5px #0ff;
@@ -109,12 +109,12 @@ body.change-bg {
 
 .trick_item {
     box-sizing: border-box;
-    /* min-height: 38px; */
     padding: 5px;
     margin-bottom: 5px;
     border-radius: 5px;
     background: #2382D3;
     user-select: none;
+
 }
 
 .trick_item:hover {
@@ -156,7 +156,8 @@ body.change-bg {
     gap: 10px;
     flex-wrap: wrap;
     overflow: scroll;
-    height: 93vh;
+    height: 90vh;
+    padding-bottom: 50px;
 }
 
 .trick_list_wrapper {
@@ -207,7 +208,7 @@ body.change-bg {
     box-shadow: 0px 0px 10px 10px #0ff;
     background-color: #AE2A1D;
     z-index: 1;
-    transform: scale(1.2);
+    transform: scale(1.1);
 }
 
 .character-item img {
@@ -224,7 +225,7 @@ body.change-bg {
 
 .transform-anim {
     /* display: none; */
-    transform: translateY(0px);
+    transform: translateY(-50%);
 }
 
 .item-selected {
@@ -280,14 +281,15 @@ body.change-bg {
 
 
 /* MEDIA  */
-@media (orientation: landscape) and (max-width: 800px) {
+/* I off media because add padding bottom to wrapper */
+/* @media (orientation: landscape) and (max-width: 800px) {
     .wrapper {
         height: 75vh;
     }
 }
 
-@media (max-width: 380px) {
+@media (max-width: 576px) {
     .wrapper {
         height: 80vh;
     }
-}
+} */

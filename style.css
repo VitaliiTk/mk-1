@@ -52,7 +52,7 @@ body.change-bg {
     left: 0;
     right: 0;
     top: 10px;
-    transform: translateY(0);
+    transform: translateY(-3000px);
     transition: all 0.5s;
     /* box-shadow: 0px 0px 10px 5px #0ff; */
     overflow: hidden;
@@ -222,7 +222,7 @@ body.change-bg {
 
 .transform-anim {
     /* display: none; */
-    transform: translateY(-3000px);
+    transform: translateY(0px);
 }
 
 .item-selected {
@@ -272,7 +272,9 @@ body.change-bg {
     /* display: none; */
 }
 
-
+.scroll-stop {
+    overflow: hidden;
+}
 
 
 /* MEDIA  */

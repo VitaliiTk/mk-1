@@ -302,22 +302,15 @@
 const card = document.querySelector('.card');
 let charBtn = document.querySelectorAll('.character-item');
 
-// charBtn.forEach(element => {
-//     element.addEventListener('click', () => {
-//         // card.classList.remove('display-none');
-//         charBtn.forEach((item) => {
-//             item.classList.remove('item-selected');
-//         })
-//         element.classList.add('item-selected');
-//     })
-// })
+
 
 const closeMoveModalBtn = document.querySelector('.close');
 closeMoveModalBtn.addEventListener('click', () => {
-    card.classList.add('transform-anim');
+    card.classList.remove('transform-anim');
     charBtn.forEach((item) => {
         item.classList.remove('item-selected');
     })
+    body.classList.remove("scroll-stop")
 })
 
 
@@ -338,18 +331,22 @@ startBtn.addEventListener('click', () => {
 })
 
 
+
+
 // FETCH JSON =======================
 // =======================================
-
+// in HTML call
 function replaceContentIn(event, chooseCharacter) {
 
-    card.classList.remove('transform-anim');
+    // card and scroll work
+    card.classList.add('transform-anim');
     charBtn.forEach((item) => {
         item.classList.remove('item-selected');
     })
-    event.currentTarget.classList.add('item-selected')
+    event.currentTarget.classList.add('item-selected');
+    body.classList.add("scroll-stop");
 
-
+    // from JSON file take data 
     fetch('./characters.json')
         .then(response => response.json())
         .then(data => {

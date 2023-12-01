@@ -42,7 +42,7 @@ body.change-bg {
 
 .card {
     max-width: 1200px;
-    height: 96vh;
+    height: 97vh;
     padding: 15px;
     border-radius: 10px;
     background: rgba(232, 232, 232, 1);
@@ -70,9 +70,10 @@ body.change-bg {
     z-index: 20;
 }
 
-/* .card_content {
-    overflow: scroll;
-} */
+.card_content {
+    /* overflow: scroll; */
+    /* height: 80vh; */
+}
 
 .card .card_title {
     text-align: left;

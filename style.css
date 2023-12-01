@@ -42,7 +42,7 @@ body.change-bg {
 
 .card {
     max-width: 1200px;
-    height: 97vh;
+    height: 96vh;
     padding: 15px;
     border-radius: 10px;
     background: rgba(232, 232, 232, 1);
@@ -154,7 +154,7 @@ body.change-bg {
     gap: 10px;
     flex-wrap: wrap;
     overflow: scroll;
-    height: 90vh;
+    height: 93vh;
 }
 
 .trick_list_wrapper {
@@ -278,14 +278,14 @@ body.change-bg {
 
 
 /* MEDIA  */
-@media (orientation: landscape) {
+@media (orientation: landscape) and (max-width: 800px) {
     .wrapper {
-        height: 80vh;
+        height: 75vh;
     }
 }
 
 @media (max-width: 380px) {
     .wrapper {
-        height: 88vh;
+        height: 80vh;
     }
 }

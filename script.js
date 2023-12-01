@@ -335,10 +335,10 @@ startBtn.addEventListener('click', () => {
 
 // FETCH JSON =======================
 // =======================================
-// in HTML call
+// in HTML call this function by onclick atribute
 function replaceContentIn(event, chooseCharacter) {
 
-    // card and scroll work
+    // card and scroll work when click in HTML
     card.classList.add('transform-anim');
     charBtn.forEach((item) => {
         item.classList.remove('item-selected');

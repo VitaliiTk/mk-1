@@ -45,8 +45,8 @@ body.change-bg {
     height: 97vh;
     padding: 15px;
     border-radius: 10px;
-    background: rgba(232, 232, 232, 1);
-    /* backdrop-filter: blur(100px); */
+    /* background: rgba(232, 232, 232, 1); */
+    backdrop-filter: blur(300px);
     margin: 0 auto;
     position: fixed;
     left: 0;
@@ -54,7 +54,7 @@ body.change-bg {
     top: 10px;
     transform: translateY(-3000px);
     transition: all 0.5s;
-    /* box-shadow: 0px 0px 10px 5px #0ff; */
+    box-shadow: 0px 0px 5px 5px #0ff;
     overflow: hidden;
 }
 

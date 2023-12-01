@@ -324,13 +324,17 @@ closeMoveModalBtn.addEventListener('click', () => {
 
 // Start Btn Logic
 const startBtn = document.querySelector('.btn-start');
-const characterList = document.querySelector('.character-list');
+const btnSatrtWrapper = document.querySelector('.btn-start_wrapper')
+const characterList = document.querySelector('.character');
 const body = document.querySelector('body');
 
 startBtn.addEventListener('click', () => {
-    characterList.classList.remove('start-anim-gap');
-    startBtn.classList.add('display-none');
+    characterList.classList.add('start-anim-gap');
+    btnSatrtWrapper.classList.add('display-none');
     body.classList.add('change-bg')
+    setTimeout(() => {
+        btnSatrtWrapper.style.display = "none";
+    }, 300);
 })
 
 

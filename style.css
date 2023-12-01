@@ -46,8 +46,8 @@ body.change-bg {
     height: 90vh;
     padding: 15px;
     border-radius: 10px;
-    /* background: rgba(232, 232, 232, 1); */
-    backdrop-filter: blur(300px);
+    background: rgba(10, 10, 10, 0.98);
+    /* backdrop-filter: blur(300px); */
     margin: 0 auto;
     position: fixed;
     left: 10px;
@@ -280,15 +280,15 @@ body.change-bg {
 }
 
 
-/* MEDIA  */
+/* MEDIA 
 /* I off media because add padding bottom to wrapper */
-/* @media (orientation: landscape) and (max-width: 800px) {
+@media (max-height: 400px) {
     .wrapper {
-        height: 75vh;
+        padding-bottom: 80px;
     }
 }
 
-@media (max-width: 576px) {
+/* @media (max-width: 576px) {
     .wrapper {
         height: 80vh;
     }

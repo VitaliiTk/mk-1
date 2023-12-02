@@ -71,11 +71,6 @@ body.change-bg {
     z-index: 20;
 }
 
-.card_content {
-    /* overflow: scroll; */
-    /* height: 80vh; */
-}
-
 .card .card_title {
     text-align: left;
     font-weight: 900;
@@ -266,7 +261,7 @@ body.change-bg {
     color: #eee;
 }
 
-.start-anim-gap {
+.active {
     transform: scale(1);
 }
 

@@ -298,49 +298,51 @@
 //     }
 // }
 
+const cardOfMoves = document.querySelector('.card');
+const characterCard = document.querySelectorAll('.character-item');
+const startBtn = document.querySelector('.btn-start');
+const startBtnWrapper = document.querySelector('.btn-start_wrapper')
+const sectionCharacter = document.querySelector('.character');
+const body = document.querySelector('body');
+const closeBtn = document.querySelector('.close');
+const characterCardTitle = document.querySelector('.card_title');
 
-const card = document.querySelector('.card');
-let charBtn = document.querySelectorAll('.character-item');
+const basicList = document.querySelector('.trick_list.basic');
+const aerialList = document.querySelector('.trick_list.aerial');
+const throwsList = document.querySelector('.trick_list.throws');
+const specialList = document.querySelector('.trick_list.special');
+const fatalBlowList = document.querySelector('.trick_list.fatal_blow');
+const fatalitiesList = document.querySelector('.trick_list.fatalities');
+const brutalitiesList = document.querySelector('.trick_list.brutalities');
 
 
-
-const closeMoveModalBtn = document.querySelector('.close');
-closeMoveModalBtn.addEventListener('click', () => {
-    card.classList.remove('transform-anim');
-    charBtn.forEach((item) => {
+// Close Modal MoveCart and lock scroll background
+closeBtn.addEventListener('click', () => {
+    cardOfMoves.classList.remove('transform-anim');
+    characterCard.forEach((item) => {
         item.classList.remove('item-selected');
     })
     body.classList.remove("scroll-stop")
 })
 
-
-
 // Start Btn Logic
-const startBtn = document.querySelector('.btn-start');
-const btnSatrtWrapper = document.querySelector('.btn-start_wrapper')
-const characterList = document.querySelector('.character');
-const body = document.querySelector('body');
-
 startBtn.addEventListener('click', () => {
-    characterList.classList.add('start-anim-gap');
-    btnSatrtWrapper.classList.add('display-none');
+    sectionCharacter.classList.add('active');
+    startBtnWrapper.classList.add('display-none');
     body.classList.add('change-bg')
     setTimeout(() => {
-        btnSatrtWrapper.style.display = "none";
+        startBtnWrapper.style.display = "none";
     }, 300);
 })
-
-
-
 
 // FETCH JSON =======================
 // =======================================
 // in HTML call this function by onclick atribute
-function replaceContentIn(event, chooseCharacter) {
+function replaceContentIn(event, characterNameFromHtml) {
 
     // card and scroll work when click in HTML
-    card.classList.add('transform-anim');
-    charBtn.forEach((item) => {
+    cardOfMoves.classList.add('transform-anim');
+    characterCard.forEach((item) => {
         item.classList.remove('item-selected');
     })
     event.currentTarget.classList.add('item-selected');
@@ -350,12 +352,12 @@ function replaceContentIn(event, chooseCharacter) {
     fetch('./characters.json')
         .then(response => response.json())
         .then(data => {
-            let characterName = document.querySelector('.card_title');
-            characterName.textContent = data[chooseCharacter].name;
+            characterCardTitle.textContent = data[characterNameFromHtml].name;
+
             // basic attacks
-            let listBasic = "";
-            data[chooseCharacter].basic.forEach(element => {
-                listBasic += `
+            basicList.innerHTML = '';
+            data[characterNameFromHtml].basic.forEach(element => {
+                basicList.insertAdjacentHTML('beforeend', `
                     <li class="trick_item">
                         <div class="trick_info">
                             <div class="trick_name">
@@ -365,15 +367,14 @@ function replaceContentIn(event, chooseCharacter) {
                                 <span class="move-btn">${element.button}</span>
                             </div>
                         </div>
-                    </li>
-                `
+                    </li>`
+                );
             });
-            document.querySelector('.trick_list.basic').innerHTML = listBasic;
 
             // aerial attacks
-            let moveAerial = "";
-            data[chooseCharacter].aerial.forEach(element => {
-                moveAerial += `
+            aerialList.innerHTML = "";
+            data[characterNameFromHtml].aerial.forEach(element => {
+                aerialList.insertAdjacentHTML('beforeend', `
                     <li class="trick_item">
                         <div class="trick_info">
                             <div class="trick_name">
@@ -383,15 +384,14 @@ function replaceContentIn(event, chooseCharacter) {
                                 <span class="move-btn">${element.button}</span>
                             </div>
                         </div>
-                    </li>
-                `
+                    </li>`
+                )
             });
-            document.querySelector('.trick_list.aerial').innerHTML = moveAerial;
 
             // throws
-            let throwsList = "";
-            data[chooseCharacter].throws.forEach(element => {
-                throwsList += `
+            throwsList.innerHTML = "";
+            data[characterNameFromHtml].throws.forEach(element => {
+                throwsList.insertAdjacentHTML('beforeend', `
                     <li class="trick_item">
                         <div class="trick_info">
                             <div class="trick_name">
@@ -401,15 +401,14 @@ function replaceContentIn(event, chooseCharacter) {
                                 <span class="move-btn">${element.button}</span>
                             </div>
                         </div>
-                    </li>
-                `
+                    </li>`
+                )
             });
-            document.querySelector('.trick_list.throws').innerHTML = throwsList;
 
             // special moves
-            let specialList = "";
-            data[chooseCharacter].special.forEach(element => {
-                specialList += `
+            specialList.innerHTML = "";
+            data[characterNameFromHtml].special.forEach(element => {
+                specialList.insertAdjacentHTML('beforeend', `
                     <li class="trick_item">
                         <div class="trick_info">
                             <div class="trick_name">
@@ -419,15 +418,14 @@ function replaceContentIn(event, chooseCharacter) {
                                 <span class="move-btn">${element.button}</span>
                             </div>
                         </div>
-                    </li>
-                `
+                    </li>`
+                )
             });
-            document.querySelector('.trick_list.special').innerHTML = specialList;
 
             // fatal blow
-            let fatalBlowList = "";
-            data[chooseCharacter].fatal_blow.forEach(element => {
-                fatalBlowList += `
+            fatalBlowList.innerHTML = "";
+            data[characterNameFromHtml].fatal_blow.forEach(element => {
+                fatalBlowList.insertAdjacentHTML('beforeend', `
                     <li class="trick_item">
                         <div class="trick_info">
                             <div class="trick_name">
@@ -437,15 +435,14 @@ function replaceContentIn(event, chooseCharacter) {
                                 <span class="move-btn">${element.button}</span>
                             </div>
                         </div>
-                    </li>
-                `
+                    </li>`
+                )
             });
-            document.querySelector('.trick_list.fatal_blow').innerHTML = fatalBlowList;
 
             // fatalities
-            let fatalitiesList = "";
-            data[chooseCharacter].fatalities.forEach(element => {
-                fatalitiesList += `
+            fatalitiesList.innerHTML = "";
+            data[characterNameFromHtml].fatalities.forEach(element => {
+                fatalitiesList.insertAdjacentHTML('beforeend', `
                     <li class="trick_item">
                         <div class="trick_info">
                             <div class="trick_name">
@@ -455,15 +452,14 @@ function replaceContentIn(event, chooseCharacter) {
                                 <span class="move-btn">${element.button}</span>
                             </div>
                         </div>
-                    </li>
-                `
+                    </li>`
+                )
             });
-            document.querySelector('.trick_list.fatalities').innerHTML = fatalitiesList;
 
             // fatalities
-            let brutalitiesList = "";
-            data[chooseCharacter].brutalities.forEach(element => {
-                brutalitiesList += `
+            brutalitiesList.innerHTML = "";
+            data[characterNameFromHtml].brutalities.forEach(element => {
+                brutalitiesList.insertAdjacentHTML('beforeend', `
                     <li class="trick_item">
                         <div class="trick_info">
                             <div class="trick_name">
@@ -473,10 +469,9 @@ function replaceContentIn(event, chooseCharacter) {
                                 <span class="move-btn">${element.button}</span>
                             </div>
                         </div>
-                    </li>
-                `
+                    </li>`
+                )
             });
-            document.querySelector('.trick_list.brutalities').innerHTML = brutalitiesList;
         })
 
 }

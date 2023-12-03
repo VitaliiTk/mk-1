@@ -6,7 +6,10 @@ body {
     box-sizing: border-box;
     background: #041721;
     font-family: sans-serif;
-    background-image: url('https://hillswestroundup.com/wp-content/uploads/2023/10/mortal-kombat-1.jpg');
+    /* background-image: url('https://hillswestroundup.com/wp-content/uploads/2023/10/mortal-kombat-1.jpg'); */
+    /* background-image: url('https://i.redd.it/here-is-a-mk1-desktop-wallpaper-ive-put-together-phone-v0-30pvuyqrtk9b1.jpg?width=1920&format=pjpg&auto=webp&s=fc86cc1df8a20e765a67b1d0df97733dd3ae5795'); */
+    /* background-image: url('https://w0.peakpx.com/wallpaper/980/501/HD-wallpaper-liu-kang-fire-god-mortal-kombat-1-liu-kang-mortal-kombat-1-mortal-kombat-games-2023-games-ps5-games-xbox-one-games.jpg'); */
+    background-image: url('https://images5.alphacoders.com/132/1329225.jpeg');
     background-attachment: fixed;
     background-size: cover;
     background-repeat: no-repeat;
@@ -241,23 +244,25 @@ body.change-bg {
 }
 
 .btn-start {
-    background-color: rgba(255, 255, 255, 1);
-    padding: 10px 50px;
+    /* background-color: rgba(255, 255, 255, 1); */
+    padding: 10px 5px;
     font-size: 22px;
     font-weight: 900;
     text-transform: uppercase;
-    color: #AE2A1D;
+    color: #eee;
     cursor: pointer;
     letter-spacing: 3px;
     transition: all 0.5s;
-    box-shadow: 0px 0px 40px 20px #0ff;
+    /* box-shadow: 0px 0px 40px 20px #0ff; */
     user-select: none;
+    border-bottom: 1px solid #fff;
+    border-width: 1px;
 }
 
 .btn-start:hover {
-    background-color: #AE2A1D;
+    /* background-color: #AE2A1D; */
     letter-spacing: 10px;
-    padding: 15px 60px;
+    padding: 15px 20px;
     color: #eee;
 }
 
@@ -274,6 +279,24 @@ body.change-bg {
     overflow: hidden;
 }
 
+#one {
+    /* height: 10px; */
+    /* width: 10px; */
+    padding: 0 3px;
+    background-color: #FFDA00;
+    display: inline-block;
+    border-radius: 50%;
+    color: #000;
+}
+
+#two {
+    /* height: 10px; */
+    /* width: 10px; */
+    padding: 0 3px;
+    background-color: #0025FF;
+    display: inline-block;
+    border-radius: 50%;
+}
 
 /* MEDIA 
 /* I off media because add padding bottom to wrapper */

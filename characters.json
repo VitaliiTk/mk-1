@@ -1,532 +1,87 @@
-{
-    "empty": {
-        "name": "empty",
-        "basic": [],
-        "aerial": [],
+[
+    {
+        "id": 0,
+        "name": "kitana",
+        "img": "./img/kitana-02.jpg",
+        "basic": [
+            {
+                "name": "first",
+                "move": [
+                    "<span id='one'>какойто</span>",
+                    "<span id='two'>прием</span>"
+                ]
+            },
+            {
+                "name": "second",
+                "move": [
+                    "<span id='two'>X</span><span id='plus'>+</span><span id='one'>Y</span>"
+                ]
+            }
+        ],
+        "aerial": [
+            {
+                "name": "aerial-1",
+                "move": [
+                    "нужно добавлять"
+                ]
+            }
+        ],
+        "throws": [
+            {
+                "name": "throw",
+                "move": [
+                    "<span id='two'>X</span><span id='plus'>+</span><span id='one'>Y</span>"
+                ]
+            }
+        ],
+        "special": [],
+        "fatalBlow": [],
+        "fatalities": [],
+        "brutalities": [],
+        "breakers": [],
+        "taunts": []
+    },
+    {
+        "id": 1,
+        "name": "nitara",
+        "img": "./img/nitara.jpg",
+        "basic": [
+            {
+                "name": "first",
+                "move": [
+                    "<span id='one'>я</span>",
+                    "<span id='two'>секси</span>"
+                ]
+            }
+        ],
+        "aerial": [
+            {
+                "name": "aerial-1",
+                "move": [
+                    "яха бля"
+                ]
+            }
+        ],
         "throws": [],
         "special": [],
-        "fatal_blow": [],
+        "fatalBlow": [],
         "fatalities": [],
-        "brutalities": []
+        "brutalities": [],
+        "breakers": [],
+        "taunts": []
     },
-    "baraka": {
+    {
+        "id": 2,
         "name": "baraka",
-        "basic": [
-            {
-                "name": "Jawripper",
-                "button": "1"
-            },
-            {
-                "name": "Gutwrencher",
-                "button": "1,2"
-            },
-            {
-                "name": "Lobotomizer",
-                "button": "1,2,1"
-            },
-            {
-                "name": "Reflex Tester",
-                "button": "B+1"
-            },
-            {
-                "name": "Deep Cuts",
-                "button": "B+1,2"
-            },
-            {
-                "name": "Side Swipe",
-                "button": "D+1"
-            },
-            {
-                "name": "Gutbuster",
-                "button": "2"
-            },
-            {
-                "name": "Gurgler",
-                "button": "2,1"
-            },
-            {
-                "name": "Euthanizer",
-                "button": "2,1,2"
-            },
-            {
-                "name": "Tarkatan Plunger",
-                "button": "F+2"
-            },
-            {
-                "name": "Upper-Clawt",
-                "button": "D+2"
-            },
-            {
-                "name": "Kick Off",
-                "button": "3"
-            },
-            {
-                "name": "Two-Step",
-                "button": "3,4"
-            },
-            {
-                "name": "Bleeding Foot",
-                "button": "B+3"
-            },
-            {
-                "name": "Battle Cry",
-                "button": "B+3,1"
-            },
-            {
-                "name": "Warrior's Fury",
-                "button": "B+3,2"
-            },
-            {
-                "name": "Heel Drop",
-                "button": "F+3"
-            },
-            {
-                "name": "Knee Breaker",
-                "button": "D+3"
-            },
-            {
-                "name": "Quick Shave",
-                "button": "4"
-            },
-            {
-                "name": "Butcher",
-                "button": "4,4,4"
-            },
-            {
-                "name": "Slaughter House",
-                "button": "4,4,4,4,4,4"
-            },
-            {
-                "name": "Cut Down",
-                "button": "B+4"
-            },
-            {
-                "name": "Muay Cry",
-                "button": "F+4"
-            },
-            {
-                "name": "Shove Off",
-                "button": "F+4,4"
-            },
-            {
-                "name": "Klean Kuts",
-                "button": "D+4"
-            }
-        ],
-        "aerial": [
-            {
-                "name": "Quick Palm",
-                "button": "UF+1"
-            },
-            {
-                "name": "Set",
-                "button": "UF+1,2"
-            },
-            {
-                "name": "Spike",
-                "button": "UF+1,2,1"
-            },
-            {
-                "name": "Hellish Heel",
-                "button": "UF+1,4"
-            },
-            {
-                "name": "Bird Slayer",
-                "button": "UF+2"
-            },
-            {
-                "name": "Star Kicker",
-                "button": "UF+1,2,4"
-            },
-            {
-                "name": "Karnivorous Kick",
-                "button": "UF+3 or UF+4"
-            }
-        ],
-        "throws": [
-            {
-                "name": "Shove",
-                "button": "F + THROW or <br>F + 1 + 3"
-            },
-            {
-                "name": "Quick Taste",
-                "button": "THROW or <br>1 + 3"
-            }
-        ],
-        "special": [
-            {
-                "name": "Bleeding Blade",
-                "button": "B F 1"
-            },
-            {
-                "name": "Enhanced Bleeding Blade",
-                "button": "B F 1+BLOCK"
-            },
-            {
-                "name": "(Air) Blade Sparks",
-                "button": "D B 1"
-            },
-            {
-                "name": "(Air) Enhanced Blade Sparks",
-                "button": "D B 1+BLOCK"
-            },
-            {
-                "name": "Stab Stab",
-                "button": "D B 1"
-            },
-            {
-                "name": "Stab Stab Chuck",
-                "button": "D B 1,Hold B"
-            },
-            {
-                "name": "Enhanced Stab Stab",
-                "button": "D B 1+BLOCK"
-            },
-            {
-                "name": "Baraka Barage",
-                "button": "D F 2"
-            },
-            {
-                "name": "Enhanced Baraka Barage",
-                "button": "D F 2+BLOCK"
-            },
-            {
-                "name": "(Air) Death Spin",
-                "button": "D F 2"
-            },
-            {
-                "name": "(Air) Enhanced Death Spin",
-                "button": "D F 2+BLOCK"
-            },
-            {
-                "name": "(Air) Enhanced Death Spi",
-                "button": "Hold 2"
-            },
-            {
-                "name": "Chop Chop",
-                "button": "B F 3"
-            },
-            {
-                "name": "Enhanced Chop Chop",
-                "button": "B F 3+BLOCK"
-            },
-            {
-                "name": "Extend Chop Chop",
-                "button": "BLOCK"
-            }
-        ],
-        "fatal_blow": [
-            {
-                "name": "Shishkabob",
-                "button": "STANCE + BLOCK"
-            }
-        ],
-        "fatalities": [
-            {
-                "name": "(Close) Split Decision",
-                "button": "B F D, 1"
-            },
-            {
-                "name": "(Close) Fatality #2",
-                "button": "F B D, 4"
-            }
-        ],
-        "brutalities": [
-            {
-                "name": "The Klassic",
-                "button": "D + 2"
-            }
-        ]
-    },
-    "johnny_cage": {
-        "name": "Johnny Cage",
-        "basic": [
-            {
-                "name": "Plot Fist",
-                "button": "1"
-            },
-            {
-                "name": "Rough House",
-                "button": "1,1"
-            },
-            {
-                "name": "Knuckle Under The Buckle",
-                "button": "1,1,2"
-            },
-            {
-                "name": "Kontracted Kick",
-                "button": "1,1,4"
-            },
-            {
-                "name": "Breaking Backhand",
-                "button": "F+1"
-            },
-            {
-                "name": "Elbow's World",
-                "button": "F+1,2"
-            },
-            {
-                "name": "Under The Table",
-                "button": "F+1,2,3"
-            },
-            {
-                "name": "Back To The Footure",
-                "button": "F+1,2,4"
-            },
-            {
-                "name": "The Bee's Knees",
-                "button": "D+1"
-            },
-            {
-                "name": "Talk To The Hand",
-                "button": "2"
-            },
-            {
-                "name": "My Own Publifist",
-                "button": "2,1"
-            },
-            {
-                "name": "Dunking On Haters",
-                "button": "2,1,2"
-            },
-            {
-                "name": "Legbanged RedemptShin",
-                "button": "2,1,4"
-            },
-            {
-                "name": "Foot Loosey Goosey",
-                "button": "2,1,4,4"
-            },
-            {
-                "name": "Gutbusters",
-                "button": "B+2"
-            },
-            {
-                "name": "Charge Gutbuster",
-                "button": "Hold 2"
-            },
-            {
-                "name": "Upper-Krust",
-                "button": "D+2"
-            },
-            {
-                "name": "Reading Shoe",
-                "button": "3"
-            },
-            {
-                "name": "Pow",
-                "button": "3,3"
-            },
-            {
-                "name": "Footless",
-                "button": "B+3"
-            },
-            {
-                "name": "Dizzy Knee",
-                "button": "F+3"
-            },
-            {
-                "name": "Elbow Before Me",
-                "button": "F+3,2"
-            },
-            {
-                "name": "On The Chin",
-                "button": "F+3,2,1"
-            },
-            {
-                "name": "Style Points",
-                "button": "F+3,4"
-            },
-            {
-                "name": "Ankle Of The Covenant",
-                "button": "D+3"
-            },
-            {
-                "name": "John Kick",
-                "button": "4"
-            },
-            {
-                "name": "Cagenado",
-                "button": "4,4"
-            },
-            {
-                "name": "Sweep The Leg",
-                "button": "B+4"
-            },
-            {
-                "name": "Flipper",
-                "button": "F+4"
-            },
-            {
-                "name": "Donkey Kick",
-                "button": "D+4"
-            }
-        ],
-        "aerial": [
-            {
-                "name": "Sky Die",
-                "button": "UF+1"
-            },
-            {
-                "name": "Private Jet",
-                "button": "UF+1,2"
-            },
-            {
-                "name": "Air Blood",
-                "button": "UF+1,2,4"
-            },
-            {
-                "name": "Face X",
-                "button": "UF+2"
-            },
-            {
-                "name": "Air Goring",
-                "button": "UF+2,4"
-            },
-            {
-                "name": "Star Wrecked: The Final Footier",
-                "button": "UF+2,4,4"
-            },
-            {
-                "name": "Toe Tap",
-                "button": "UF+3 or UF+4"
-            }
-        ],
-        "throws": [
-            {
-                "name": "Shove",
-                "button": "F + THROW or <br>F + 1 + 3"
-            },
-            {
-                "name": "Hands Off",
-                "button": "THROW+BLOCK or <br>1 + 3+BLOCK"
-            },
-            {
-                "name": "Wombo Kombo",
-                "button": "THROW or <br>1 + 3"
-            }
-        ],
-        "special": [
-            {
-                "name": "Ball Buster",
-                "button": "B D 1"
-            },
-            {
-                "name": "Enhanced Ball Buster",
-                "button": "B D 1+BLOCK"
-            },
-            {
-                "name": "Ball Buster (Hype)",
-                "button": "B D 1,STANCE"
-            },
-            {
-                "name": "Show Off",
-                "button": "D B 1"
-            },
-            {
-                "name": "Extend Show Off",
-                "button": "Hold 1"
-            },
-            {
-                "name": "Enhanced Show Off",
-                "button": "D B 1+BLOCK"
-            },
-            {
-                "name": "Throwing Shade",
-                "button": "F D B 2"
-            },
-            {
-                "name": "Enhanced Throwing Shade",
-                "button": "F D B 2+BLOCK"
-            },
-            {
-                "name": "Throwing Shade (Hype)",
-                "button": "F D B 2,STANCE"
-            },
-            {
-                "name": "Rising Star",
-                "button": "D B 3"
-            },
-            {
-                "name": "Enhanced Rising Star",
-                "button": "D B 3+BLOCK"
-            },
-            {
-                "name": "Rising Star (Hype)",
-                "button": "D B 3,STANCE"
-            },
-            {
-                "name": "Shadow Dash",
-                "button": "D F 3"
-            },
-            {
-                "name": "Enhanced Shadow Dash",
-                "button": "D F 3+BLOCK"
-            },
-            {
-                "name": "Extend Shadow Dash",
-                "button": "STANCE"
-            },
-            {
-                "name": "Shadow Kick",
-                "button": "B F 4"
-            },
-            {
-                "name": "Enhanced Shadow Kick",
-                "button": "B F 4+BLOCK"
-            },
-            {
-                "name": "Shadow Kick (Hype)",
-                "button": "B F 4,STANCE"
-            },
-            {
-                "name": "Hype",
-                "button": "F D B 4"
-            },
-            {
-                "name": "Wowing Out",
-                "button": "F D B 4"
-            }
-        ],
-        "fatal_blow": [
-            {
-                "name": "That's All Folks",
-                "button": "STANCE + BLOCK"
-            },
-            {
-                "name": "Or Is It?",
-                "button": "Hold STANCE + BLOCK"
-            },
-            {
-                "name": "Shadow Dash",
-                "button": "D F 3"
-            }
-        ],
-        "fatalities": [
-            {
-                "name": "(Close) Hollywood Walk of P",
-                "button": "F B D,2"
-            },
-            {
-                "name": "(Mid or Far) Fatality #2",
-                "button": "F D B,4"
-            }
-        ],
-        "brutalities": [
-            {
-                "name": "The Klassic",
-                "button": "D + 2"
-            }
-        ]
-    },
-    "smoke": {
-        "name": "smoke",
+        "img": "./img/baraka-03.jpg",
         "basic": [],
         "aerial": [],
         "throws": [],
         "special": [],
-        "fatal_blow": [],
+        "fatalBlow": [],
         "fatalities": [],
-        "brutalities": []
+        "brutalities": [],
+        "breakers": [],
+        "taunts": []
     }
-}
+]

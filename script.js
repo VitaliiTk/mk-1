@@ -17,36 +17,10 @@ const brutalities = document.querySelector('.trick_list.brutalities');
 const breakers = document.querySelector('.trick_list.breakers');
 const taunts = document.querySelector('.trick_list.taunts');
 
-// inputs variables
-const inputs = document.querySelectorAll('input');
-const inputCharacterName = document.getElementById('character-name');
-const inputMoveName = document.getElementById('move-name');
-const inputMoveButtons = document.getElementById('move-buttons');
-const inputSendBtn = document.getElementById('send-btn');
-
-// inputs logic
-function inputsWork() {
-    inputs.forEach(input => {
-        input.addEventListener('click', () => {
-            input.value = "";
-        })
-    })
-
-    inputSendBtn.addEventListener('click', sendInputValue);
-    function sendInputValue() {
-        console.log(inputCharacterName.value);
-        console.log(inputMoveName.value);
-        console.log(inputMoveButtons.value);
-    }
-}
-inputsWork();
-
-
-
 // Start Btn Logic
 startBtn.addEventListener('click', () => {
     sectionCharacter.classList.add('active');
-    startBtnWrapper.classList.add('display-none');
+    startBtnWrapper.classList.add('scale-0');
     body.classList.add('change-bg')
     setTimeout(() => {
         startBtnWrapper.style.display = "none";
@@ -55,87 +29,93 @@ startBtn.addEventListener('click', () => {
 
 
 // start FETCH function
-fetch('./characters.json').then(response => response.json()).then(data => {
+fetch('./characters.json')
+    .then(response => response.json())
+    .then(data => {
 
-    data.forEach(item => {
-        characterList.insertAdjacentHTML('beforeend', `
+        data.forEach(item => {
+            characterList.insertAdjacentHTML('beforeend', `
             <li class="character-item" id="${item.id}">
                 <img src="${item.img}" draggable="false">
                 <div class="character-name">${item.name}</div>
             </li>
         `)
-    })
-
-    // choose and activate for each character item via click
-    let characterCard = document.querySelectorAll('.character-item');
-    characterCard.forEach(card => {
-        card.addEventListener('click', () => {
-            characterCard.forEach(card => {
-                card.classList.remove('item-selected');
-            })
-            card.classList.add('item-selected');
-            cardOfMoves.classList.add('transform-anim')
-            body.classList.add('scroll-stop');
-            getCharacterCardId();
-            getCharacterName(card);
         })
-    })
 
-    // close button in modal window
-    closeBtn.addEventListener('click', () => {
-        cardOfMoves.classList.remove('transform-anim');
-        body.classList.remove("scroll-stop")
+        // choose and activate for each character item via click
+        let characterCard = document.querySelectorAll('.character-item');
         characterCard.forEach(card => {
-            card.classList.remove('item-selected')
+            card.addEventListener('click', () => {
+                characterCard.forEach(card => {
+                    card.classList.remove('item-selected');
+                })
+                card.classList.add('item-selected');
+                cardOfMoves.classList.add('transform-anim')
+                body.classList.add('scroll-stop');
+                getCharacterId();
+                getCharacterName(card);
+            })
         })
-    })
 
-    // get char card id and take data from json and ad to move list card of each character
-    function getCharacterCardId() {
-        const characterCardId = document.querySelector('.item-selected').getAttribute('id');
+        // close button in modal window
+        closeBtn.addEventListener('click', () => {
+            cardOfMoves.classList.remove('transform-anim');
+            body.classList.remove("scroll-stop")
+            characterCard.forEach(card => {
+                card.classList.remove('item-selected')
+            })
+        })
 
-        // move list add moves
-        basic.innerHTML = "";
-        aerial.innerHTML = "";
-        throws.innerHTML = "";
-        special.innerHTML = "";
-        fatalBlow.innerHTML = "";
-        fatalities.innerHTML = "";
-        brutalities.innerHTML = "";
-        breakers.innerHTML = "";
-        taunts.innerHTML = "";
-        moveListAddContent('basic', basic);
-        moveListAddContent('aerial', aerial);
-        moveListAddContent('throws', throws);
-        moveListAddContent('special', special);
-        moveListAddContent('fatalBlow', fatalBlow);
-        moveListAddContent('fatalities', fatalities);
-        moveListAddContent('brutalities', brutalities);
-        moveListAddContent('breakers', breakers);
-        moveListAddContent('taunts', taunts);
+        function cleanMoveList() {
+            basic.innerHTML = "";
+            aerial.innerHTML = "";
+            throws.innerHTML = "";
+            special.innerHTML = "";
+            fatalBlow.innerHTML = "";
+            fatalities.innerHTML = "";
+            brutalities.innerHTML = "";
+            breakers.innerHTML = "";
+            taunts.innerHTML = "";
+        }
 
-        function moveListAddContent(a, b) {
-            data[characterCardId][a].forEach(item => {
-                b.insertAdjacentHTML('beforeend', `
+        // get char card i|d and take data from json and ad to move list card of each character
+        function getCharacterId() {
+            const selectedCharacterId = document.querySelector('.item-selected').getAttribute('id');
+
+
+            cleanMoveList();
+
+            // move list add moves
+            function moveListAddContent(a, b) {
+                data[selectedCharacterId][a].forEach(item => {
+                    b.insertAdjacentHTML('beforeend', `
                     <li class="trick_item">
+                        <div class="trick_modal"></div>
                         <div class="trick_info">
-                            <div class="trick_name">
-                                ${item.name}
-                            </div>
+                            <div class="trick_name">${item.name}</div>
                             <div class="trick_execution">
-                            <span class="move-btn">${item.move}</span>
+                                <span class="move-btn">${item.move}</span>
                             </div>
                         </div>
                     </li>
                 `)
-            })
+                })
+            }
+            moveListAddContent('basic', basic);
+            moveListAddContent('aerial', aerial);
+            moveListAddContent('throws', throws);
+            moveListAddContent('special', special);
+            moveListAddContent('fatalBlow', fatalBlow);
+            moveListAddContent('fatalities', fatalities);
+            moveListAddContent('brutalities', brutalities);
+            moveListAddContent('breakers', breakers);
+            moveListAddContent('taunts', taunts);
         }
-    }
 
-    function getCharacterName(a) {
-        const characterName = a.querySelector('.character-name').textContent;
-        console.log(characterName)
-        characterCardTitle.textContent = characterName;
-    }
 
-})
+        function getCharacterName(a) {
+            const characterName = a.querySelector('.character-name').textContent;
+            characterCardTitle.textContent = characterName;
+        }
+
+    })

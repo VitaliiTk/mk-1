@@ -1,67 +1,512 @@
 [
     {
         "id": 0,
-        "name": "kitana",
-        "img": "./img/kitana-02.jpg",
+        "name": "baraka",
+        "img": "./img/baraka-03.jpg",
         "basic": [
             {
-                "name": "first",
+                "name": "Jawripper",
                 "move": [
-                    "<span id='one'>какойто</span>",
-                    "<span id='two'>прием</span>"
+                    "<span id='one' class='move-buttons'>1</span>"
                 ]
             },
             {
-                "name": "second",
+                "name": "Gutwrencher",
                 "move": [
-                    "<span id='two'>X</span><span id='plus'>+</span><span id='one'>Y</span>"
+                    "<span id='one' class='move-buttons'>1</span>",
+                    "<span id='two' class='move-buttons'>2</span>"
+                ]
+            },
+            {
+                "name": "Lobotomizer",
+                "move": [
+                    "<span id='one' class='move-buttons'>1</span>",
+                    "<span id='two' class='move-buttons'>2</span>",
+                    "<span id='one' class='move-buttons'>1</span>"
+                ]
+            },
+            {
+                "name": "Reflex Tester",
+                "move": [
+                    "<span id='back' class='move-buttons'>&larr;</span>",
+                    "<span id='plus' class='move-buttons'>&plus;</span>",
+                    "<span id='one' class='move-buttons'>1</span>"
+                ]
+            },
+            {
+                "name": "Deep Cuts",
+                "move": [
+                    "back",
+                    "plus",
+                    "one",
+                    "two"
+                ]
+            },
+            {
+                "name": "Side Swipe",
+                "move": [
+                    "down",
+                    "plus",
+                    "one"
+                ]
+            },
+            {
+                "name": "Gutbuster",
+                "move": [
+                    "two"
+                ]
+            },
+            {
+                "name": "Gurgler",
+                "move": [
+                    "two",
+                    "one"
+                ]
+            },
+            {
+                "name": "Euthanizer",
+                "move": [
+                    "two",
+                    "one",
+                    "two"
+                ]
+            },
+            {
+                "name": "Tarkatan Plunger",
+                "move": [
+                    "forward",
+                    "plus",
+                    "two"
+                ]
+            },
+            {
+                "name": "Upper-Clawt",
+                "move": [
+                    "down",
+                    "plus",
+                    "two"
+                ]
+            },
+            {
+                "name": "Kick Off",
+                "move": [
+                    "three"
+                ]
+            },
+            {
+                "name": "Two-Step",
+                "move": [
+                    "three",
+                    "four"
+                ]
+            },
+            {
+                "name": "Bleeding Foot",
+                "move": [
+                    "back",
+                    "plus",
+                    "three"
+                ]
+            },
+            {
+                "name": "Battle Cry",
+                "move": [
+                    "back",
+                    "plus",
+                    "three",
+                    "one"
+                ]
+            },
+            {
+                "name": "Warrior's Fury",
+                "move": [
+                    "back",
+                    "plus",
+                    "three",
+                    "two"
+                ]
+            },
+            {
+                "name": "Heel Drop",
+                "move": [
+                    "forward",
+                    "plus",
+                    "three"
+                ]
+            },
+            {
+                "name": "Knee Breaker",
+                "move": [
+                    "down",
+                    "plus",
+                    "three"
+                ]
+            },
+            {
+                "name": "Quick Shave",
+                "move": [
+                    "four"
+                ]
+            },
+            {
+                "name": "Butcher",
+                "move": [
+                    "four",
+                    "four",
+                    "four"
+                ]
+            },
+            {
+                "name": "Slaughter House",
+                "move": [
+                    "four",
+                    "four",
+                    "four",
+                    "four",
+                    "four",
+                    "four"
+                ]
+            },
+            {
+                "name": "Cut Down",
+                "move": [
+                    "back",
+                    "plus",
+                    "four"
+                ]
+            },
+            {
+                "name": "Muay Cry",
+                "move": [
+                    "forward",
+                    "plus",
+                    "four"
+                ]
+            },
+            {
+                "name": "Shove Off",
+                "move": [
+                    "forward",
+                    "plus",
+                    "four",
+                    "four"
+                ]
+            },
+            {
+                "name": "Klean Kuts",
+                "move": [
+                    "down",
+                    "plus",
+                    "four"
                 ]
             }
         ],
         "aerial": [
             {
-                "name": "aerial-1",
+                "name": "Quick Palm",
                 "move": [
-                    "нужно добавлять"
+                    "upforward",
+                    "one"
+                ]
+            },
+            {
+                "name": "Set",
+                "move": [
+                    "upforward",
+                    "plus",
+                    "one",
+                    "two"
+                ]
+            },
+            {
+                "name": "Spike",
+                "move": [
+                    "upforward",
+                    "plus",
+                    "one",
+                    "two",
+                    "one"
+                ]
+            },
+            {
+                "name": "Hellish Heel",
+                "move": [
+                    "upforward",
+                    "plus",
+                    "one",
+                    "four"
+                ]
+            },
+            {
+                "name": "Bird Slayer",
+                "move": [
+                    "upforward",
+                    "plus",
+                    "two"
+                ]
+            },
+            {
+                "name": "Star Kicker",
+                "move": [
+                    "upforward",
+                    "plus",
+                    "two",
+                    "four"
+                ]
+            },
+            {
+                "name": "Karnivorous Kick",
+                "move": [
+                    "upforward",
+                    "plus",
+                    "three",
+                    "or",
+                    "upforward",
+                    "plus",
+                    "four"
                 ]
             }
         ],
         "throws": [
             {
-                "name": "throw",
+                "name": "Shove",
                 "move": [
-                    "<span id='two'>X</span><span id='plus'>+</span><span id='one'>Y</span>"
+                    "forward",
+                    "plus",
+                    "throw",
+                    "or",
+                    "forward",
+                    "plus",
+                    "one",
+                    "plus",
+                    "three"
+                ]
+            },
+            {
+                "name": "Quick Taste",
+                "move": [
+                    "throw",
+                    "or",
+                    "one",
+                    "plus",
+                    "three"
                 ]
             }
         ],
-        "special": [],
-        "fatalBlow": [],
-        "fatalities": [],
-        "brutalities": [],
-        "breakers": [],
-        "taunts": []
+        "breakers": [
+            {
+                "name": "Kombo Breaker",
+                "move": [
+                    "forward",
+                    "plus",
+                    "block"
+                ]
+            }
+        ],
+        "taunts": [
+            {
+                "name": "Taunts",
+                "move": [
+                    "down",
+                    "down",
+                    "down",
+                    "down"
+                ]
+            }
+        ],
+        "special": [
+            {
+                "name": "Bleeding Blade",
+                "move": [
+                    "back",
+                    "forward",
+                    "one"
+                ]
+            },
+            {
+                "name": "Enhanced Bleed",
+                "move": [
+                    "back",
+                    "forward",
+                    "one",
+                    "plus",
+                    "block"
+                ]
+            },
+            {
+                "name": "(Air) Blade Spar",
+                "move": [
+                    "down",
+                    "back",
+                    "one"
+                ]
+            },
+            {
+                "name": "(Air) Enhanced B",
+                "move": [
+                    "down",
+                    "back",
+                    "one",
+                    "plus",
+                    "one"
+                ]
+            },
+            {
+                "name": "Stab Stab",
+                "move": [
+                    "down",
+                    "back",
+                    "one"
+                ]
+            },
+            {
+                "name": "Stab Stab Chuck",
+                "move": [
+                    "down",
+                    "back",
+                    "one",
+                    "hold",
+                    "back"
+                ]
+            },
+            {
+                "name": "Enhanced Stab S",
+                "move": [
+                    "down",
+                    "back",
+                    "one",
+                    "plus",
+                    "block"
+                ]
+            },
+            {
+                "name": "Baraka Barage",
+                "move": [
+                    "down",
+                    "forward",
+                    "two"
+                ]
+            },
+            {
+                "name": "Enhanced Barak",
+                "move": [
+                    "down",
+                    "forward",
+                    "two",
+                    "plus",
+                    "block"
+                ]
+            },
+            {
+                "name": "(Air) Death Spin",
+                "move": [
+                    "down",
+                    "forward",
+                    "two"
+                ]
+            },
+            {
+                "name": "(Air) Enhanced D",
+                "move": [
+                    "down",
+                    "forward",
+                    "two",
+                    "plus",
+                    "block"
+                ]
+            },
+            {
+                "name": "(Air) Enhanced ",
+                "move": [
+                    "hold",
+                    "two"
+                ]
+            },
+            {
+                "name": "Chop Chop",
+                "move": [
+                    "back",
+                    "forward",
+                    "three"
+                ]
+            },
+            {
+                "name": "Enhanced Chop ",
+                "move": [
+                    "back",
+                    "forward",
+                    "three",
+                    "plus",
+                    "block"
+                ]
+            },
+            {
+                "name": "Extend Chop Cho",
+                "move": [
+                    "block"
+                ]
+            }
+        ],
+        "fatalBlow": [
+            {
+                "name": "Shishkabob",
+                "move": [
+                    "stance",
+                    "plus",
+                    "block"
+                ]
+            }
+        ],
+        "fatalities": [
+            {
+                "name": "(Close) Split Decis",
+                "move": [
+                    "back",
+                    "forward",
+                    "down",
+                    "one"
+                ]
+            },
+            {
+                "name": "(Close) Fatality #",
+                "move": [
+                    "forward",
+                    "back",
+                    "down",
+                    "four"
+                ]
+            }
+        ],
+        "brutalities": [
+            {
+                "name": "The Klassic",
+                "move": [
+                    "down",
+                    "plus",
+                    "two"
+                ]
+            }
+        ]
     },
     {
         "id": 1,
-        "name": "nitara",
-        "img": "./img/nitara.jpg",
+        "name": "kitana",
+        "img": "./img/kitana-02.jpg",
         "basic": [
             {
-                "name": "first",
+                "name": "Kitana Fuck",
                 "move": [
-                    "<span id='one'>я</span>",
-                    "<span id='two'>секси</span>"
+                    "back forward up 1"
                 ]
-            }
-        ],
-        "aerial": [
+            },
             {
-                "name": "aerial-1",
+                "name": "Pussy Kiss",
                 "move": [
-                    "яха бля"
+                    "down forward 4"
                 ]
             }
         ],
+        "aerial": [],
         "throws": [],
         "special": [],
         "fatalBlow": [],
@@ -72,8 +517,50 @@
     },
     {
         "id": 2,
-        "name": "baraka",
-        "img": "./img/baraka-03.jpg",
+        "name": "nitara",
+        "img": "./img/nitara.jpg",
+        "basic": [],
+        "aerial": [],
+        "throws": [],
+        "special": [],
+        "fatalBlow": [],
+        "fatalities": [],
+        "brutalities": [],
+        "breakers": [],
+        "taunts": []
+    },
+    {
+        "id": 3,
+        "name": "Johnny Cage",
+        "img": "./img/johny-03.jpg",
+        "basic": [],
+        "aerial": [],
+        "throws": [],
+        "special": [],
+        "fatalBlow": [],
+        "fatalities": [],
+        "brutalities": [],
+        "breakers": [],
+        "taunts": []
+    },
+    {
+        "id": 4,
+        "name": "Kenshi",
+        "img": "./img/kenshi-01.jpg",
+        "basic": [],
+        "aerial": [],
+        "throws": [],
+        "special": [],
+        "fatalBlow": [],
+        "fatalities": [],
+        "brutalities": [],
+        "breakers": [],
+        "taunts": []
+    },
+    {
+        "id": 5,
+        "name": "reptile",
+        "img": "./img/reptile.jpg",
         "basic": [],
         "aerial": [],
         "throws": [],

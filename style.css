@@ -6,9 +6,6 @@ body {
     box-sizing: border-box;
     background: #041721;
     font-family: sans-serif;
-    /* background-image: url('https://hillswestroundup.com/wp-content/uploads/2023/10/mortal-kombat-1.jpg'); */
-    /* background-image: url('https://i.redd.it/here-is-a-mk1-desktop-wallpaper-ive-put-together-phone-v0-30pvuyqrtk9b1.jpg?width=1920&format=pjpg&auto=webp&s=fc86cc1df8a20e765a67b1d0df97733dd3ae5795'); */
-    /* background-image: url('https://w0.peakpx.com/wallpaper/980/501/HD-wallpaper-liu-kang-fire-god-mortal-kombat-1-liu-kang-mortal-kombat-1-mortal-kombat-games-2023-games-ps5-games-xbox-one-games.jpg'); */
     background-image: url('https://images5.alphacoders.com/132/1329225.jpeg');
     background-attachment: fixed;
     background-size: cover;
@@ -49,8 +46,7 @@ body.change-bg {
     height: 90vh;
     padding: 15px;
     border-radius: 10px;
-    background: rgba(10, 10, 10, 0.98);
-    /* backdrop-filter: blur(300px); */
+    background-color: #DDDDDD;
     margin: 0 auto;
     position: fixed;
     left: 10px;
@@ -110,8 +106,9 @@ body.change-bg {
     padding: 5px;
     margin-bottom: 5px;
     border-radius: 5px;
-    background: #2382D3;
+    background: #162226;
     user-select: none;
+    position: relative;
 
 }
 
@@ -123,7 +120,6 @@ body.change-bg {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    /* background-color: #ff0147; */
     border-radius: 3px;
 }
 
@@ -244,7 +240,6 @@ body.change-bg {
 }
 
 .btn-start {
-    /* background-color: rgba(255, 255, 255, 1); */
     padding: 10px 5px;
     font-size: 22px;
     font-weight: 900;
@@ -253,14 +248,12 @@ body.change-bg {
     cursor: pointer;
     letter-spacing: 3px;
     transition: all 0.5s;
-    /* box-shadow: 0px 0px 40px 20px #0ff; */
     user-select: none;
     border-bottom: 1px solid #fff;
     border-width: 1px;
 }
 
 .btn-start:hover {
-    /* background-color: #AE2A1D; */
     letter-spacing: 10px;
     padding: 15px 20px;
     color: #eee;
@@ -270,43 +263,68 @@ body.change-bg {
     transform: scale(1);
 }
 
-.display-none {
+.scale-0 {
     transform: scale(0);
-    /* display: none; */
 }
 
 .scroll-stop {
     overflow: hidden;
 }
 
-#one {
-    /* height: 10px; */
-    /* width: 10px; */
-    padding: 0 3px;
-    background-color: #FFDA00;
+
+
+/* buttons universal-----------------------------
+----------------------------------------------- */
+.move-buttons {
+    height: 20px;
+    width: 20px;
     display: inline-block;
     border-radius: 50%;
     color: #000;
+    text-align: center;
+    line-height: 20px;
+}
+
+#one {
+    background-color: #96C8FF;
 }
 
 #two {
-    /* height: 10px; */
-    /* width: 10px; */
-    padding: 0 3px;
-    background-color: #0025FF;
-    display: inline-block;
-    border-radius: 50%;
+    background-color: #89DBB8;
+}
+
+#three {
+    background-color: #FFC896;
+}
+
+#four {
+    background-color: #FF9696;
+}
+
+#back,
+#plus {
+    background-color: transparent;
+    font-weight: 700;
+    color: #fff;
 }
 
 
 
+.trick_modal {
+    width: 100px;
+    height: 100px;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: none;
+}
 
 
 
 /* inputs disign */
 .inputs-box {
     text-align: center;
-    /* margin-top: 20px; */
 }
 
 .box {
@@ -318,16 +336,9 @@ body.change-bg {
 }
 
 
-/* MEDIA 
-/* I off media because add padding bottom to wrapper */
+/* MEDIA */
 @media (max-height: 400px) {
     .wrapper {
         padding-bottom: 80px;
     }
 }
-
-/* @media (max-width: 576px) {
-    .wrapper {
-        height: 80vh;
-    }
-} */

@@ -59,8 +59,8 @@ body.change-bg {
 }
 
 .close {
-    height: 70px;
-    width: 70px;
+    height: 60px;
+    width: 60px;
     border: none;
     outline: none;
     position: absolute;
@@ -68,6 +68,11 @@ body.change-bg {
     top: -5px;
     cursor: pointer;
     z-index: 20;
+    transition: all ease 0.3s;
+}
+
+.close:hover {
+    transform: scale(1.2);
 }
 
 .card .card_title {

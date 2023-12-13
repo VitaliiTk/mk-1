@@ -347,3 +347,9 @@ body.change-bg {
         padding-bottom: 80px;
     }
 }
+
+@media (max-width: 720px) {
+    body.change-bg {
+        background-image: none;
+    }
+}

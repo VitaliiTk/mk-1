@@ -349,6 +349,10 @@ body.change-bg {
 }
 
 @media (max-width: 720px) {
+    body::after {
+        background: #041721;
+    }
+
     body.change-bg {
         background-image: none;
     }

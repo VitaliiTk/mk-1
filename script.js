@@ -43,10 +43,10 @@ fetch('./characters.json')
         })
 
         // choose and activate for each character item via click
-        let characterCard = document.querySelectorAll('.character-item');
-        characterCard.forEach(card => {
+        const characterItem = document.querySelectorAll('.character-item');
+        characterItem.forEach(card => {
             card.addEventListener('click', () => {
-                characterCard.forEach(card => {
+                characterItem.forEach(card => {
                     card.classList.remove('item-selected');
                 })
                 card.classList.add('item-selected');
@@ -61,7 +61,7 @@ fetch('./characters.json')
         closeBtn.addEventListener('click', () => {
             cardOfMoves.classList.remove('transform-anim');
             body.classList.remove("scroll-stop")
-            characterCard.forEach(card => {
+            characterItem.forEach(card => {
                 card.classList.remove('item-selected')
             })
         })
@@ -78,7 +78,7 @@ fetch('./characters.json')
             taunts.innerHTML = "";
         }
 
-        // get char card i|d and take data from json and ad to move list card of each character
+        // get char card id and take data from json and ad to move list card of each character
         function getCharacterId() {
             const selectedCharacterId = document.querySelector('.item-selected').getAttribute('id');
 
